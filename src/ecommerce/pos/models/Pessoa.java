@@ -1,7 +1,7 @@
 package ecommerce.pos.models;
 
 public class Pessoa {
-private int nome;
+private int codigo;
 
 
 }
