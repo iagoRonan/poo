@@ -7,8 +7,10 @@ private String email;
 public Contato(String telefone, String email) {
 	super();
 	this.telefone = telefone;
-	this.email = email;
-	
+	this.email = email;	
+}
+
+public Contato() {
 }
 
 public String getTelefone() {

@@ -8,6 +8,7 @@ private String cidade;
 private String estado;
 private String cep;
 
+
 public Endereco() {
 	super();}
 
