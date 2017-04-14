@@ -42,6 +42,11 @@ public class PessoaFisica extends Pessoa{
 		this.cpf = cpf;
 	}
 
-	
+	public void mostrardados(){
+		System.out.println("Nome: "+ nome);
+		System.out.println("Nascimento: "+ datanascimento);
+		System.out.println("RG: "+ rg);
+		System.out.println("CPF: "+ cpf);
+	}
 	
 }
