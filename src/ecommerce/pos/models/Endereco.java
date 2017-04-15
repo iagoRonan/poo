@@ -10,10 +10,9 @@ private String cep;
 
 
 public Endereco() {
-	super();}
+}
 
 public Endereco(String logradouro, int numero, String bairro, String cidade, String estado, String cep) {
-	super();
 	this.logradouro = logradouro;
 	this.numero = numero;
 	this.bairro = bairro;

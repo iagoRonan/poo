@@ -10,8 +10,8 @@ public class PessoaFisica extends Pessoa{
 	public PessoaFisica() {
 		super();}
 	
-	public PessoaFisica(String nome, String datanascimento, String rg, String cpf) {
-		super();
+	public PessoaFisica(int codigo, String nome, String datanascimento, String rg, String cpf) {
+		super(codigo);
 		this.nome = nome;
 		this.datanascimento = datanascimento;
 		this.rg = rg;
@@ -43,10 +43,11 @@ public class PessoaFisica extends Pessoa{
 	}
 
 	public void mostrardados(){
-		System.out.println("Nome: "+ nome);
-		System.out.println("Nascimento: "+ datanascimento);
-		System.out.println("RG: "+ rg);
-		System.out.println("CPF: "+ cpf);
+		super.mostrardados();
+		System.out.println("Nome: "+ this.nome);
+		System.out.println("Nascimento: "+ this.datanascimento);
+		System.out.println("RG: "+ this.rg);
+		System.out.println("CPF: "+ this.cpf);
 	}
 	
 }
