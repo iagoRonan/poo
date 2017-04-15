@@ -1,6 +1,6 @@
 package ecommerce.pos.models;
 
-public class PessoaFisica extends Pessoa{
+public class PessoaFisica extends Pessoa implements IPessoaAutenticavel{
 
 	private String nome;
 	private String datanascimento;
@@ -46,5 +46,12 @@ public class PessoaFisica extends Pessoa{
 		System.out.println("RG: "+ this.rg);
 		System.out.println("CPF: "+ this.cpf);
 	}
-	
+
+	public boolean Autenticação(String login, String senha)  // Implementação de método da interface
+	{
+		if(login != "clientePF" && senha != "1234"){
+		return false;}
+		return true;}
 }
+	
+

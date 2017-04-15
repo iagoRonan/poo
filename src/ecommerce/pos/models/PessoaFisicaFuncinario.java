@@ -1,6 +1,6 @@
 package ecommerce.pos.models;
 
-public class PessoaFisicaFuncinario extends PessoaFisica implements IPessoaAutenticavel{
+public class PessoaFisicaFuncinario extends PessoaFisica {
 	
 	private int carteiratrabalho;
 	
@@ -18,12 +18,4 @@ public class PessoaFisicaFuncinario extends PessoaFisica implements IPessoaAuten
 	public void setCarteiratrabalho(int carteiratrabalho) {
 		this.carteiratrabalho = carteiratrabalho;
 	}
-
-
-	public boolean Autenticação(String login, String senha)  // Implementação de método da interface
-	{
-		if(login != "cliente" && senha != "1234"){
-		return false;}
-		return true;}
-	}
-
+}
