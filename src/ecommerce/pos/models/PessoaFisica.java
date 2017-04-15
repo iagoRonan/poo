@@ -1,6 +1,6 @@
 package ecommerce.pos.models;
 
-abstract public class PessoaFisica extends Pessoa{
+public class PessoaFisica extends Pessoa{
 
 	private String nome;
 	private String datanascimento;
