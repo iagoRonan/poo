@@ -1,14 +1,11 @@
 package ecommerce.pos.models;
 
-public class PessoaFisica extends Pessoa{
+abstract public class PessoaFisica extends Pessoa{
 
 	private String nome;
 	private String datanascimento;
 	private String rg;
 	private String cpf;
-	
-	public PessoaFisica() {
-		super();}
 	
 	public PessoaFisica(int codigo, String nome, String datanascimento, String rg, String cpf) {
 		super(codigo);
