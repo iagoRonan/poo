@@ -7,42 +7,31 @@ public class ItemPedido {
 	private int qtdItem;
 	private float subtotal;
 	
-	public ItemPedido(int codItem) {
-		this.codItem = codItem;
-			}
-	
 	public ItemPedido(int codItem, Produto produto, int qtdItem) {
 		super();
 		this.codItem = codItem;
 		this.produto = produto;
-		this.qtdItem = qtdItem;
-	}
+		this.qtdItem = qtdItem;}
 
 	public int getCodItem() {
-		return codItem;
-	}
+		return codItem;}
 	public void setCodItem(int codItem) {
-		this.codItem = codItem;
-	}
-	
+		this.codItem = codItem;}
 	
 	public Produto getProduto() {
-		return produto;
-	}
+		return produto;}
 
 	public void setProduto(Produto produto) {
-		this.produto = produto;
-	}
+		this.produto = produto;}
 
 	public int getQtdItem() {
-		return qtdItem;
-	}
+		return qtdItem;}
 	public void setQtdItem(int qtdItem) {
-		this.qtdItem = qtdItem;
-	}
+		this.qtdItem = qtdItem;}
 	
-	public void setsubtotal(){
+	public float getsubtotal(){
 		this.subtotal = produto.getValorProduto()*this.qtdItem;
+		return subtotal;
 	}
 
 }

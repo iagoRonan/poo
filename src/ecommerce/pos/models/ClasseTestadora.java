@@ -21,6 +21,7 @@ public class ClasseTestadora {
 		Produto produto4 = new Produto(13, "Mangueira de Jardim",19, "Casa e Jardinagem");
 		Produto produto5 = new Produto(14, "Mouse multilaser",25, "Informatica");
 		
+		
 		// adicionando produtoodutos como itemens da lista de pedido
 		ItemPedido item1 = new ItemPedido(20,produto1,3);
 		ItemPedido item2 = new ItemPedido(21,produto2,1);
@@ -42,6 +43,7 @@ public class ClasseTestadora {
 		cliente1.mostrardados();
 		cliente2.mostrardados();
 		pedido1.mostrarPedido();
+		
 		
 		
 	}
