@@ -14,9 +14,11 @@ public class PessoaJuridica extends Pessoa implements IPessoaAutenticavel {
 	
 	public void mostrardados(){
 		super.mostrardados();
+		System.out.println("** Dados da Pessoa Juricdica **");
 		System.out.println("Razão Social: "+ this.razaosocial);
 		System.out.println("Nome Fantasia: "+ this.nomefantasia);
 		System.out.println("CNPJ: "+ this.cnpj);	
+		System.out.println("  ");
 	}
 	
 
