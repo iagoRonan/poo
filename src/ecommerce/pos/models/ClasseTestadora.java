@@ -30,7 +30,7 @@ public class ClasseTestadora {
 		ItemPedido item5 = new ItemPedido(24,produto5,1);
 		
 		// criando um pedido com cliente e numero de itemens
-		Pedido pedido1 = new Pedido(30,cliente1,5);
+		Pedido pedido1 = new Pedido(30,cliente1,6);
 		
 		// adicionando itemens a lista de pedido
 		pedido1.setListaItens(item1,0);
@@ -38,6 +38,7 @@ public class ClasseTestadora {
 		pedido1.setListaItens(item3,2);
 		pedido1.setListaItens(item4,3);
 		pedido1.setListaItens(item5,4);
+		pedido1.setListaItens(item1,5);
 		
 		// Mostrar dados
 		cliente1.mostrardados();

@@ -40,7 +40,7 @@ public class Pedido {
 	
 	public float getValorTotal() {
 		this.valorTotal = 0;
-		for (int x=0;x<5;x++){
+		for (int x=0;x<Itens.length;x++){
 		this.valorTotal = this.valorTotal + this.Itens[x].getsubtotal();}
 		return valorTotal;
 	}
@@ -54,16 +54,10 @@ public class Pedido {
 		System.out.println("Endereco do cliente: "+ this.cliente.endereco.getLogradouro());
 		System.out.println("Contato do cliente: "+ this.cliente.contato.getTelefone());
 		System.out.println("Dados do pedido: -------------");
-		System.out.print("Itens: "+ this.Itens[0].getProduto().getDescricao() + "---- ");
-		System.out.println("subtotal: "+ this.Itens[0].getsubtotal());
-		System.out.print("Itens: "+ this.Itens[1].getProduto().getDescricao()+ "---- ");
-		System.out.println("subtotal: "+ this.Itens[1].getsubtotal());
-		System.out.print("Itens: "+ this.Itens[2].getProduto().getDescricao()+ "---- ");
-		System.out.println("subtotal: "+ this.Itens[2].getsubtotal());
-		System.out.print("Itens: "+ this.Itens[3].getProduto().getDescricao()+ "---- ");
-		System.out.println("subtotal: "+ this.Itens[3].getsubtotal());
-		System.out.print("Itens: "+ this.Itens[4].getProduto().getDescricao()+ "---- ");
-		System.out.println("subtotal: "+ this.Itens[4].getsubtotal());
+		for (int x=0;x<Itens.length;x++){	
+			System.out.print("Itens: "+ this.Itens[x].getProduto().getDescricao() + "---- ");
+			System.out.println("subtotal: "+ this.Itens[x].getsubtotal());
+			}
 		System.out.println("Total: "+ this.getValorTotal());
 	}
 }
