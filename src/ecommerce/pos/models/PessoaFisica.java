@@ -41,12 +41,11 @@ public class PessoaFisica extends Pessoa implements IPessoaAutenticavel{
 
 	public void mostrardados(){
 		super.mostrardados();
-		System.out.println("** Dados da Pessoa F�sica **");
+		System.out.println("**************** Dados da Pessoa Fisica ***************");
 		System.out.println("Nome: "+ this.nome);
 		System.out.println("Nascimento: "+ this.datanascimento);
 		System.out.println("RG: "+ this.rg);
 		System.out.println("CPF: "+ this.cpf);
-		System.out.println(" ");
 	}
 
 	public boolean Autenticacao(String login, String senha)  // Implementa��o de m�todo da interface

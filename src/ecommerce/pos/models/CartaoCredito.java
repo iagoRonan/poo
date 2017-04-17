@@ -68,9 +68,9 @@ public class CartaoCredito extends FormaPagamento {
 
 	@Override
 	public String toString() {
-		return "CartaoCredito [bandeira=" + bandeira + ", operacao=" + operacao + ", QtddVezes=" + QtddVezes
-				+ ", titular=" + titular + ", validade=" + validade + ", numero=" + numero + ", codigoSeguranca="
-				+ codigoSeguranca + "]";
+		return "\nCartaoCredito \nbandeira: " + bandeira + " \noperacao: " + operacao + "\nQtddVezes: " + QtddVezes
+				+ "\ntitular: " + titular + "\nvalidade: " + validade + "\nnumero: " + numero + "\ncodigoSeguranca: "
+				+ codigoSeguranca;
 	}
 	
 }

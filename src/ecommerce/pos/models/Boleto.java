@@ -33,8 +33,7 @@ public class Boleto extends FormaPagamento{
 	}
 	@Override
 	public String toString() {
-		return "Boleto [dataVencimento=" + dataVencimento + ", Codigodebarras=" + Codigodebarras + ", Banco=" + Banco
-				+ "]";
+		return "Boleto \ndataVencimento: " + dataVencimento + "\nCodigodebarras: " + Codigodebarras + "\nBanco:" + Banco;
 	}
 	
 	

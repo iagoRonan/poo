@@ -26,7 +26,7 @@ public class FormaPagamento {
 
 	public void realizaPagamento(boolean flag, String data){
 		if (flag){
-			System.out.println("pagamento realizado!");
+			System.out.println("\npagamento realizado!");
 			confirmacaoPagamento = true;
 			this.dataPagamento = data;
 		}else{
@@ -36,7 +36,7 @@ public class FormaPagamento {
 
 	@Override
 	public String toString() {
-		return "FormaPagamento [codPagamento=" + codPagamento + ", dataPagamento=" + dataPagamento
+		return "FormaPagamento [codPagamento: " + codPagamento + "\n dataPagamento=" + dataPagamento
 				+ ", confirmacaoPagamento=" + confirmacaoPagamento + "]";
 	}
 	

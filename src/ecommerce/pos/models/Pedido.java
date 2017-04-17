@@ -62,12 +62,12 @@ public class Pedido {
 		cliente.mostrardados();
 		System.out.println("<-----------------------------Dados do pedido: ------------------------------>");
 		for (int x=0;x<Itens.length;x++){	
-			System.out.print("Itens: "+ this.Itens[x].getProduto().getDescricao() + "---- ");
+			System.out.print("Itens: "+ this.Itens[x].getProduto().getDescricao() + "			");
 			System.out.println("subtotal: "+ this.Itens[x].getsubtotal());
 			}
-		System.out.println("Total: "+ this.CalculoValorTotal());
+		System.out.println("					Total:	"+ this.CalculoValorTotal());
 		System.out.println("<---------------------------Dados Forma de Pagamento: ----------------------->");
-		System.out.println("Codigo do Pagamento: "+ pagamento.toString());
+		System.out.println(pagamento.toString());
 		
 	}
 }
