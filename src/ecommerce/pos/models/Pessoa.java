@@ -33,17 +33,17 @@ abstract class Pessoa { //classe abstrata não pode ser instanciada
 		}
 
 	public void mostrardados(){
-		System.out.println("Codigo: "+ this.getCodigo());
-		System.out.println("** Dados do contato **");
-		System.out.println("contato_email: "+ this.contato.getEmail());
-		System.out.println("contato_telefone: "+ this.contato.getTelefone());
-		System.out.println("** Dados do endereço **");
-		System.out.println("Endereço_logradouro: "+ this.endereco.getLogradouro());
-		System.out.println("Endereço_numero: "+ this.endereco.getNumero());
-		System.out.println("Endereço_bairro: "+ this.endereco.getBairro());
-		System.out.println("Endereço_cidade: "+ this.endereco.getCidade());
-		System.out.println("Endereço_estado: "+ this.endereco.getEstado());
-		System.out.println("Endereço_cep: "+ this.endereco.getCep());
+		System.out.println("Codigo da Pessoa: "+ this.getCodigo());
+		System.out.println("******************Dados do contato****************");
+		System.out.println("Email: "+ this.contato.getEmail());
+		System.out.println("Telefone: "+ this.contato.getTelefone());
+		System.out.println("********************Dados do endereço**************");
+		System.out.println("Logradouro: "+ this.endereco.getLogradouro());
+		System.out.println("Numero: "+ this.endereco.getNumero());
+		System.out.println("Bairro: "+ this.endereco.getBairro());
+		System.out.println("Cidade: "+ this.endereco.getCidade());
+		System.out.println("Estado: "+ this.endereco.getEstado());
+		System.out.println("Cep: "+ this.endereco.getCep());
 	}
 
 

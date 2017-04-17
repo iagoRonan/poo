@@ -31,6 +31,11 @@ public class Boleto extends FormaPagamento{
 	public void setBanco(String banco) {
 		Banco = banco;
 	}
+	@Override
+	public String toString() {
+		return "Boleto [dataVencimento=" + dataVencimento + ", Codigodebarras=" + Codigodebarras + ", Banco=" + Banco
+				+ "]";
+	}
 	
 	
 	

@@ -65,5 +65,12 @@ public class CartaoCredito extends FormaPagamento {
 	public void setCodigoSegurança(String codigoSegurança) {
 		this.codigoSegurança = codigoSegurança;
 	}
+
+	@Override
+	public String toString() {
+		return "CartaoCredito [bandeira=" + bandeira + ", operação=" + operação + ", QtddVezes=" + QtddVezes
+				+ ", titular=" + titular + ", validade=" + validade + ", numero=" + numero + ", codigoSegurança="
+				+ codigoSegurança + "]";
+	}
 	
 }

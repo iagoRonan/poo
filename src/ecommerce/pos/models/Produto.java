@@ -52,5 +52,10 @@ private int qtdProduto;
 		public void setqtdProduto(int qtdProduto) {
 			this.qtdProduto = qtdProduto;
 		}
-
+		public void retirarProduto(int qtdretirada){
+			this.qtdProduto = this.qtdProduto - qtdretirada;
+		}
+		public void adicionarProduto(int qtdadicionada){
+			this.qtdProduto = this.qtdProduto + qtdadicionada;
+		}
 }

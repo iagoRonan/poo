@@ -11,7 +11,9 @@ public class ItemPedido {
 		super();
 		this.codItem = codItem;
 		this.produto = produto;
-		this.qtdItem = qtdItem;}
+		this.qtdItem = qtdItem;
+		produto.retirarProduto(qtdItem);
+	}
 
 	public int getCodItem() {
 		return codItem;}
@@ -26,6 +28,7 @@ public class ItemPedido {
 
 	public int getQtdItem() {
 		return qtdItem;}
+	
 	public void setQtdItem(int qtdItem) {
 		this.qtdItem = qtdItem;}
 	
