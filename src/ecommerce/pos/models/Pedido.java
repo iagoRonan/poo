@@ -5,12 +5,29 @@ public class Pedido {
 	private int codPedido;
 	private Pessoa cliente;
 	private ItemPedido Itens[];
+	private FormaPagamento pagamento;
 	private float valorTotal;
 	
 	public Pedido(int codPedido, Pessoa cliente, int qtd) {
 		this.codPedido = codPedido;
+		Itens = new ItemPedido[qtd];
+		this.cliente = cliente;
+		}
+	
+	public Pedido(int codPedido, Pessoa cliente, ItemPedido[] itens, FormaPagamento pagamento, int qtd) {
+		this.codPedido = codPedido;
 		this.cliente = cliente;
 		Itens = new ItemPedido[qtd];
+		this.pagamento = pagamento;
+	}
+
+
+	public FormaPagamento getPagamento() {
+		return pagamento;
+	}
+
+	public void setPagamento(FormaPagamento pagamento) {
+		this.pagamento = pagamento;
 	}
 
 	public int getCodPedido() {
@@ -51,13 +68,14 @@ public class Pedido {
 		System.out.println("Codigo do pedido: "+ this.codPedido);
 		System.out.println("Dados do cliente: -------------");
 		System.out.println("Codigo do cliente: "+ this.cliente.codigo);
-		System.out.println("Endereco do cliente: "+ this.cliente.endereco.getLogradouro());
-		System.out.println("Contato do cliente: "+ this.cliente.contato.getTelefone());
 		System.out.println("Dados do pedido: -------------");
 		for (int x=0;x<Itens.length;x++){	
 			System.out.print("Itens: "+ this.Itens[x].getProduto().getDescricao() + "---- ");
 			System.out.println("subtotal: "+ this.Itens[x].getsubtotal());
 			}
 		System.out.println("Total: "+ this.getValorTotal());
+		System.out.println("Dados Forma de Pagamento: -------------");
+		System.out.println("Codigo do Pagamento: "+ this.pagamento.getCodPagamento());
+				
 	}
 }
