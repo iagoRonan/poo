@@ -41,7 +41,7 @@ public class PessoaFisica extends Pessoa implements IPessoaAutenticavel{
 
 	public void mostrardados(){
 		super.mostrardados();
-		System.out.println("** Dados da Pessoa Física **");
+		System.out.println("** Dados da Pessoa Fï¿½sica **");
 		System.out.println("Nome: "+ this.nome);
 		System.out.println("Nascimento: "+ this.datanascimento);
 		System.out.println("RG: "+ this.rg);
@@ -49,7 +49,7 @@ public class PessoaFisica extends Pessoa implements IPessoaAutenticavel{
 		System.out.println(" ");
 	}
 
-	public boolean Autenticação(String login, String senha)  // Implementação de método da interface
+	public boolean Autenticacao(String login, String senha)  // Implementaï¿½ï¿½o de mï¿½todo da interface
 	{
 		if(login != "clientePF" && senha != "1234"){
 		return false;}

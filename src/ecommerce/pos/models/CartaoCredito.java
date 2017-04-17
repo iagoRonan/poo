@@ -3,24 +3,24 @@ package ecommerce.pos.models;
 public class CartaoCredito extends FormaPagamento {
 
 	private String bandeira;
-	private String operação;
+	private String operacao;
 	private int QtddVezes;
 	private String titular;
 	private String validade;
 	private String numero;
-	private String codigoSegurança;
+	private String codigoSeguranca;
 	
 	
-	public CartaoCredito(int codPagamento,String bandeira, String operação, int qtddVezes, String titular, String validade, String numero,
-			String codigoSegurança){
+	public CartaoCredito(int codPagamento,String bandeira, String operacao, int qtddVezes, String titular, String validade, String numero,
+			String codigoSeguranca){
 		super(codPagamento);
 		this.bandeira = bandeira;
-		this.operação = operação;
+		this.operacao = operacao;
 		QtddVezes = qtddVezes;
 		this.titular = titular;
 		this.validade = validade;
 		this.numero = numero;
-		this.codigoSegurança = codigoSegurança;
+		this.codigoSeguranca = codigoSeguranca;
 	}
 	
 	public String getBandeira() {
@@ -29,11 +29,11 @@ public class CartaoCredito extends FormaPagamento {
 	public void setBandeira(String bandeira) {
 		this.bandeira = bandeira;
 	}
-	public String getOperação() {
-		return operação;
+	public String getoperacao() {
+		return operacao;
 	}
-	public void setOperação(String operação) {
-		this.operação = operação;
+	public void setoperacao(String operacao) {
+		this.operacao = operacao;
 	}
 	public int getQtddVezes() {
 		return QtddVezes;
@@ -59,18 +59,18 @@ public class CartaoCredito extends FormaPagamento {
 	public void setNumero(String numero) {
 		this.numero = numero;
 	}
-	public String getCodigoSegurança() {
-		return codigoSegurança;
+	public String getcodigoSeguranca() {
+		return codigoSeguranca;
 	}
-	public void setCodigoSegurança(String codigoSegurança) {
-		this.codigoSegurança = codigoSegurança;
+	public void setcodigoSeguranca(String codigoSeguranca) {
+		this.codigoSeguranca = codigoSeguranca;
 	}
 
 	@Override
 	public String toString() {
-		return "CartaoCredito [bandeira=" + bandeira + ", operação=" + operação + ", QtddVezes=" + QtddVezes
-				+ ", titular=" + titular + ", validade=" + validade + ", numero=" + numero + ", codigoSegurança="
-				+ codigoSegurança + "]";
+		return "CartaoCredito [bandeira=" + bandeira + ", operacao=" + operacao + ", QtddVezes=" + QtddVezes
+				+ ", titular=" + titular + ", validade=" + validade + ", numero=" + numero + ", codigoSeguranca="
+				+ codigoSeguranca + "]";
 	}
 	
 }
