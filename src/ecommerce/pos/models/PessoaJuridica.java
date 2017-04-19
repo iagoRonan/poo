@@ -3,7 +3,7 @@ package ecommerce.pos.models;
 public class PessoaJuridica extends Pessoa implements IPessoaAutenticavel {
 
 	public PessoaJuridica(int codigo, String razaosocial, String nomefantasia, String cnpj) {
-		super(codigo);
+		super(codigo); // Herança construtor da da superclase Pessoa
 		this.razaosocial = razaosocial;
 		this.nomefantasia = nomefantasia;
 		this.cnpj = cnpj;
@@ -20,8 +20,7 @@ public class PessoaJuridica extends Pessoa implements IPessoaAutenticavel {
 		System.out.println("CNPJ: "+ this.cnpj);	
 	}
 	
-
-	public boolean Autenticacao(String login, String senha)  // Implementaï¿½ï¿½o de mï¿½todo da interface
+	public boolean Autenticacao(String login, String senha)  // Implementação do metodo  da interface
 	{
 		if(login != "clientePJ" && senha != "1234"){
 		return false;}

@@ -1,14 +1,14 @@
 package ecommerce.pos.models;
 
 public class PessoaFisica extends Pessoa implements IPessoaAutenticavel{
-
+// Aqui é uma especialização
 	private String nome;
 	private String datanascimento;
 	private String rg;
 	private String cpf;
 	
 	public PessoaFisica(int codigo, String nome, String datanascimento, String rg, String cpf) {
-		super(codigo);
+		super(codigo);	// Herança da super classe pessoa
 		this.nome = nome;
 		this.datanascimento = datanascimento;
 		this.rg = rg;
@@ -47,7 +47,7 @@ public class PessoaFisica extends Pessoa implements IPessoaAutenticavel{
 		System.out.println("RG: "+ this.rg);
 		System.out.println("CPF: "+ this.cpf);
 	}
-
+	
 	public boolean Autenticacao(String login, String senha)  // Implementaï¿½ï¿½o de mï¿½todo da interface
 	{
 		if(login != "clientePF" && senha != "1234"){

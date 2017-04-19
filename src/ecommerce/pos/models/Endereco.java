@@ -58,5 +58,11 @@ public void setCep(String cep) {
 	this.cep = cep;
 }
 
+@Override
+public String toString() {
+	return "logradouro: " + logradouro + "\nnumero: " + numero + "\nbairro: " + bairro + "\ncidade: " + cidade
+			+ "\nestado: " + estado + "\ncep: " + cep;
+}
+
 
 }
