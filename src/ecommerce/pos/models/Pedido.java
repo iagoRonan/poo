@@ -8,6 +8,7 @@ public class Pedido {
 	private FormaPagamento pagamento;
 	private float valorTotal;
 	
+	//Contrutor 1
 	public Pedido(int codPedido, Pessoa cliente, int qtd) {
 		this.codPedido = codPedido;
 		Itens = new ItemPedido[qtd];
@@ -61,7 +62,14 @@ public class Pedido {
 		this.valorTotal = this.valorTotal + this.Itens[x].getsubtotal();}
 		return valorTotal;
 	}
-	
+
+	public float CalculoValorTotal2(float... subtotal) { // aqui usado medoto de argumentos variados.
+		float total = 0;
+        for(float d: subtotal)
+        total+=d;	 // Somando os argumentos
+        return total; // Retornando a média
+  }
+
 	public static float desconto(float valor, float taxa){
 		float novovalor = valor*(1-taxa);
 		return novovalor;
@@ -77,10 +85,10 @@ public class Pedido {
 			System.out.print("Itens: "+ this.Itens[x].getProduto().getDescricao() + "			");
 			System.out.println("genero: "+ this.Itens[x].getProduto().getTipo()+ "			");
 			System.out.println("subtotal: "+ this.Itens[x].getsubtotal());
-			
 			}
-		System.out.println("					Total:	"+ this.CalculoValorTotal());
-		
+		if(this.Itens.length == 5){
+		System.out.println("Total:	"+ this.CalculoValorTotal2(this.Itens[0].getsubtotal(),this.Itens[1].getsubtotal(),this.Itens[2].getsubtotal(),this.Itens[3].getsubtotal(),this.Itens[4].getsubtotal(),this.Itens[5].getsubtotal()));
+		}else{System.out.println("Total:  "+ this.CalculoValorTotal());}
 		System.out.println("<---------------------------Dados Forma de Pagamento: ----------------------->");
 		System.out.println(pagamento.toString());
 		

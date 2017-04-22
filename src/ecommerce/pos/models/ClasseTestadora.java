@@ -28,7 +28,7 @@ public class ClasseTestadora {
 		FormaPagamento Pagamento4 = new Boleto(4,"20/04/2017","12232344423","Banco do Brasil");		
 		//------------------------------------------------------------------------------------------------------------------------
 		// criando um pedido com cliente e numero de itemens
-		Pedido pedido1 = new Pedido(30,PJ1,6);
+		Pedido pedido1 = new Pedido(30,PF1,3);
 				
 		// adicionando produtos como itens da lista de pedido
 		ItemPedido item1 = new ItemPedido(20,produto1,3);
@@ -41,15 +41,11 @@ public class ClasseTestadora {
 		pedido1.AdicionandoItemLista(item1,0);
 		pedido1.AdicionandoItemLista(item3,1);
 		pedido1.AdicionandoItemLista(item5,2);
-		pedido1.AdicionandoItemLista(item4,3);
-		pedido1.AdicionandoItemLista(item2,4);
-		pedido1.AdicionandoItemLista(item1,5);
-		
+				
 		//forma de pagamento para o pedido 1
-		pedido1.setPagamento(Pagamento2);
+		pedido1.setPagamento(Pagamento3);
 
 		// Mostrar dados
-				
 		pedido1.mostrarPedido();
 		System.out.println("Valor total com desconto: " + Pedido.desconto(pedido1.getValorTotal(),(float)0.1));
 		pedido1.getPagamento().realizaPagamento(true, "16/04/17");
