@@ -1,10 +1,10 @@
 package ecommerce.pos.models;
 
 public class Pedido {
-
+	// Encapsulamento de todos os atributos;
 	private int codPedido;
 	private Pessoa cliente;
-	private ItemPedido Itens[];
+	private ItemPedido Itens[];	// vetor Utilizado para armazenar os produtos do pedido;
 	private FormaPagamento pagamento;
 	private float valorTotal;
 	
@@ -47,14 +47,26 @@ public class Pedido {
 	}
 	
 	
+	public float getValorTotal() {
+		return valorTotal;
+	}
+
+	public void setValorTotal(float valorTotal) {
+		this.valorTotal = valorTotal;
+	}
+
 	public float CalculoValorTotal() {
 		this.valorTotal = 0;
 		for (int x=0;x<Itens.length;x++){
 		this.valorTotal = this.valorTotal + this.Itens[x].getsubtotal();}
 		return valorTotal;
 	}
-
-
+	
+	public static float desconto(float valor, float taxa){
+		float novovalor = valor*(1-taxa);
+		return novovalor;
+	}
+	
 	public void mostrarPedido(){
 		System.out.println("<------------------------------- FOLHA DE PEDIDO ----------------------------->");
 		System.out.println("Codigo do pedido: "+ this.codPedido);
@@ -63,9 +75,12 @@ public class Pedido {
 		System.out.println("<-----------------------------Dados do pedido: ------------------------------>");
 		for (int x=0;x<Itens.length;x++){	
 			System.out.print("Itens: "+ this.Itens[x].getProduto().getDescricao() + "			");
+			System.out.println("genero: "+ this.Itens[x].getProduto().getTipo()+ "			");
 			System.out.println("subtotal: "+ this.Itens[x].getsubtotal());
+			
 			}
 		System.out.println("					Total:	"+ this.CalculoValorTotal());
+		
 		System.out.println("<---------------------------Dados Forma de Pagamento: ----------------------->");
 		System.out.println(pagamento.toString());
 		

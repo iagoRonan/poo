@@ -15,11 +15,11 @@ public class ClasseTestadora {
 		PJ1.AdicionaEndereco("avenida do bambu", 878, "joãoo pio 10", "juazeiro", "BA", "56326000");
 		
 		// criando objetos produtoodutos
-		Produto produto1 = new Produto(10, "impressora",250, "Informatica",100);
-		Produto produto2 = new Produto(11, "MicroSystem",550, "Eletros",80);
-		Produto produto3 = new Produto(12, "Faqueiro Ipanema",75, "Cama Mesa e Banho",70);
-		Produto produto4 = new Produto(13, "Mangueira de Jardim",19, "Casa e Jardinagem",80);
-		Produto produto5 = new Produto(14, "Mouse multilaser",25, "Informatica",90);
+		Produto produto1 = new Produto(10, "impressora",35,1,100);
+		Produto produto2 = new Produto(11, "MicroSystem",550, 2,80);
+		Produto produto3 = new Produto(12, "Faqueiro Ipanema",75, 3,70);
+		Produto produto4 = new Produto(13, "Mangueira de Jardim",19, 4,80);
+		Produto produto5 = new Produto(14, "Mouse multilaser",25,5,90);
 
 		// algumas forma de pagamento
 		FormaPagamento Pagamento1 = new CartaoCredito(1,"visa","credito", 3, "Mariano Ribeiro", "10/10/23", "54212345212","132");
@@ -28,7 +28,7 @@ public class ClasseTestadora {
 		FormaPagamento Pagamento4 = new Boleto(4,"20/04/2017","12232344423","Banco do Brasil");		
 		//------------------------------------------------------------------------------------------------------------------------
 		// criando um pedido com cliente e numero de itemens
-		Pedido pedido1 = new Pedido(30,PF1,6);
+		Pedido pedido1 = new Pedido(30,PJ1,6);
 				
 		// adicionando produtos como itens da lista de pedido
 		ItemPedido item1 = new ItemPedido(20,produto1,3);
@@ -46,12 +46,14 @@ public class ClasseTestadora {
 		pedido1.AdicionandoItemLista(item1,5);
 		
 		//forma de pagamento para o pedido 1
-		pedido1.setPagamento(Pagamento3);
+		pedido1.setPagamento(Pagamento2);
 
 		// Mostrar dados
 				
 		pedido1.mostrarPedido();
+		System.out.println("Valor total com desconto: " + Pedido.desconto(pedido1.getValorTotal(),(float)0.1));
 		pedido1.getPagamento().realizaPagamento(true, "16/04/17");
+		
 		
 		
 	}
